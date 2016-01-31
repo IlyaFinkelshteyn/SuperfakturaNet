@@ -1,14 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Superfaktura
 {
     public class SuperfakturaClient
     {
-        public SuperfakturaClient()
+        private string email;
+        private string token;
+
+        public SuperfakturaClient(string email, string token)
         {
+            this.email = email;
+            this.token = token;
         }
     }
 }
