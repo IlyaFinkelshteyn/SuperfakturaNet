@@ -1,16 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{22934847-236E-4670-A0A6-B10452E05EF6}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Superfaktura", "Superfaktura\Superfaktura.xproj", "{19237FAE-5D16-4FB2-B7BC-0D6BB2CB48E1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C8859A79-FC28-47EB-9466-D9BDB8154D4D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Superfaktura.Tests", "Superfaktura.Tests\Superfaktura.Tests.xproj", "{8AAA7E8C-D5EB-481F-BB10-0B3180BC0B24}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Superfaktura", "src\Superfaktura\Superfaktura.xproj", "{19237FAE-5D16-4FB2-B7BC-0D6BB2CB48E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7920D264-71AA-4CC6-AC41-1A8F02C69EF0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Superfaktura.Tests", "test\Superfaktura.Tests\Superfaktura.Tests.xproj", "{8AAA7E8C-D5EB-481F-BB10-0B3180BC0B24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19237FAE-5D16-4FB2-B7BC-0D6BB2CB48E1} = {C8859A79-FC28-47EB-9466-D9BDB8154D4D}
+		{8AAA7E8C-D5EB-481F-BB10-0B3180BC0B24} = {7920D264-71AA-4CC6-AC41-1A8F02C69EF0}
 	EndGlobalSection
 EndGlobal

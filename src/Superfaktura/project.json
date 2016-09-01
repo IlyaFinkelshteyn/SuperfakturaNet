@@ -1,0 +1,18 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Superfaktura Library",
+  "authors": [ "Jozef Izso" ],
+  "tags": [ "superfaktura api" ],
+  "projectUrl": "https://github.com/jozefizso/SuperfakturaNet",
+  "licenseUrl": "https://github.com/jozefizso/SuperfakturaNet/LICENSE",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
