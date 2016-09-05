@@ -51,3 +51,4 @@ test: off
 
 cache:
   - packages -> **\packages.config
+  - .dotnetsdk -> appveyor.yml
