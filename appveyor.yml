@@ -43,7 +43,7 @@ install:
 
 before_build:
   - ps: dotnet --info
-  - cmd: nuget restore Superfaktura.sln
+  - ps: appveyor-retry dotnet restore -v Minimal
 
 build:
   project: Superfaktura.sln
