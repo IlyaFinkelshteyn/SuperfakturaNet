@@ -52,7 +52,7 @@ after_build:
   - dotnet pack "src\Superfaktura" -c %CONFIGURATION% --no-build -o artifacts
 
 test_script:
-  - dotnet test "test\Superfaktura" -c %CONFIGURATION%
+  - dotnet test "test\Superfaktura.Tests" -c %CONFIGURATION%
 
 artifacts:
   - path: artifacts\**\*.*
