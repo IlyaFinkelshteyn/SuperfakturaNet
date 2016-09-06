@@ -52,5 +52,5 @@ test_script:
   - dotnet test "test\Superfaktura" -c %CONFIGURATION%
 
 cache:
-  - '%USERPROFILE%\.nuget\packages' -> **\project.json
+  - '%USERPROFILE%\.nuget\packages -> **\project.json'
   - .dotnetsdk -> appveyor.yml
