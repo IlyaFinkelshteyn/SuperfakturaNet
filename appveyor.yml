@@ -31,6 +31,8 @@ environment:
 
 init:
   - git config --global core.autocrlf true
+  - ps: $env:LABEL = "ci" + $env:APPVEYOR_BUILD_NUMBER.PadLeft(5, "0")
+  - ps: Update-AppveyorBuild -Version "0.1.0-${env:LABEL}"
 
 install:
   - ps: $url = "https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/$($env:CLI_VERSION)/dotnet-dev-win-x64.$($env:CLI_VERSION.ToLower()).zip"
@@ -46,10 +48,10 @@ before_build:
   - ps: appveyor-retry dotnet restore -v Minimal
 
 build_script:
-  - dotnet build "src\Superfaktura" -c %CONFIGURATION% --no-dependencies
+  - dotnet build "src\Superfaktura" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
 
 after_build:
-  - dotnet pack "src\Superfaktura" -c %CONFIGURATION% --no-build -o artifacts
+  - dotnet pack "src\Superfaktura" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 
 test_script:
   - dotnet test "test\Superfaktura.Tests" -c %CONFIGURATION%
