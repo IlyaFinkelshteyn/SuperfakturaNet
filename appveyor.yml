@@ -45,12 +45,12 @@ before_build:
   - ps: dotnet --info
   - ps: appveyor-retry dotnet restore -v Minimal
 
-build:
-  project: Superfaktura.sln
-  verbosity: normal
+build_script:
+  - dotnet build "src\Superfaktura" -c %CONFIGURATION% --no-dependencies
 
-test: off
+test_script:
+  - dotnet test "test\Superfaktura" -c %CONFIGURATION%
 
 cache:
-  - packages -> **\packages.config
+  - '%USERPROFILE%\.nuget\packages' -> **\project.json
   - .dotnetsdk -> appveyor.yml
